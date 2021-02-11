@@ -29,7 +29,7 @@ public class Employee {
 	@JoinColumn(name = "EMPLOYEE_ID")
 	private Set<Address> addresses;
 
-	@OneToOne(targetEntity = Department.class, cascade = CascadeType.ALL)
+	@OneToOne(targetEntity = Department.class, cascade = CascadeType.DETACH)
 	@JoinColumn(name = "DEPARTMENT_ID")
 	private Department department;
 
